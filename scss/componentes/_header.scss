@@ -1,0 +1,117 @@
+@use '../parciais/variaveis' as *;
+
+/* Header */
+header {
+    background: $cor-primaria;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 56px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+        
+    .header__title {
+        margin-left: calc($tamanho-texto / 0.7);
+        color: $cor-secundaria;
+        font-size: 28px;
+        cursor: pointer;
+    
+        &:hover {
+            border-bottom: 1px solid #fff;
+        }
+        
+    }
+
+    
+
+    .header__search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+
+        .header__search-box {
+            width: 30vw;
+            background-color: $cor-primaria;
+            line-height: 20px;
+            font-size: $tamanho-texto;
+            outline: none;
+            border: 1px solid gray;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            padding: 9px 35px;
+            color: $cor-secundaria;
+
+            &:hover, &:focus-within{
+                background-color: rgb(61, 61, 61);
+                border: 1px solid #fff;
+            }
+        }
+
+        .header__search-button {
+            width: 50px;
+            height: 40px;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border: 1px solid gray;
+            border-left: 0;
+            background-color: rgba(58, 57, 57, 0.363);
+
+           &:hover {
+                background-color: rgb(61, 61, 61);
+                border: 1px solid #fff;
+            }
+
+            &--icon {
+                fill: #fff;
+                width: 25px;
+            }
+        }
+    }
+
+    .header__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+
+        .header__item {
+            margin-right: calc($tamanho-texto / 0.7);
+
+            .header__item--bell-icon {
+                height: 19px;
+                fill: #fff;
+                cursor: pointer;
+            }
+
+
+            .header__link {
+                color: $cor-secundaria;
+                font-size: calc($tamanho-texto * 1.2);
+                text-decoration: none;
+
+                &:hover {
+                    border-bottom: 1px solid #fff;
+                }
+
+                .header__profile-picture{
+                    height: 39px;
+                    width: 39px;
+                    border-radius: 50%;
+                    background-image: url(../../img/perfil.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    z-index: 999;
+                }
+                
+            }
+
+            
+        }
+    }
+}

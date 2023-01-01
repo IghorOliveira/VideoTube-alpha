@@ -1,0 +1,50 @@
+@use '../parciais/variaveis' as *;
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top:56px;
+    left: -135px;
+    height: calc(100vh - 56px);
+    background-color: rgb(61, 61, 61);
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 50px 50px 50px 50px 50px auto;
+    padding: 0 20px;
+    border-right: 1px solid #000;
+    transition: 1s ease-in-out;
+
+    &:hover {
+        left: 0;
+        transition: 0.5s ease-in-out;
+    } 
+    .navbar__active {
+        background-color: #fff;
+
+        & p {
+            color: #000;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+    }
+    
+    .navbar__link {
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        align-self: center;
+        border-radius: 10px;
+        
+        &:hover {
+            background-color:  rgb(97, 96, 96);
+        }
+
+        & p {
+            padding: 10px 0px;
+            margin: 0px 0.625rem;
+        }
+    }
+}
